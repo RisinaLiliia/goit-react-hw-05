@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #3b3939;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+nav a {
+  color: #3b3939;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a.active {
+  color: #dc3545;
+}
+
+nav a:hover {
+  color: #dc3545;
+  border-bottom: 1px solid #dc3545;
+  outline: none;
+  transform: translateY(-2px);
+}
