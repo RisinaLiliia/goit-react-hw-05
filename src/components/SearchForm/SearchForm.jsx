@@ -1,18 +1,18 @@
-import { Formik, Form, Field } from "formik";
-import { useSearchParams } from "react-router-dom";
-import { toast } from "react-hot-toast";
-import css from "./SearchForm.module.css";
+import { Formik, Form, Field } from 'formik';
+import { useSearchParams } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import css from './SearchForm.module.css';
 
 const SearchForm = ({ onSubmit }) => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get("query") || "";
+  const query = searchParams.get('query') || '';
 
   return (
     <Formik
       initialValues={{ query }}
       onSubmit={(values, { setSubmitting, resetForm }) => {
         if (!values.query.trim()) {
-          toast.error("Please enter a movie name.");
+          toast.error('Please enter a movie name.');
           setSubmitting(false);
           return;
         }
