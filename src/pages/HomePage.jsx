@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { fetchTrendingMovies } from "../tmdbApi";
-import toast from "react-hot-toast";
+import { useEffect, useState } from 'react';
+import { fetchTrendingMovies } from '../tmdbApi';
+import toast from 'react-hot-toast';
 
-import MovieList from "../components/MovieList/MovieList";
+import MovieList from '../components/MovieList/MovieList';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -26,8 +26,8 @@ const HomePage = () => {
 
   return (
     <div>
-      {isLoading && <p>Loading...</p>}
       <h1>Trending Movies</h1>
+      {isLoading && <p>Loading...</p>}
       <MovieList movies={movies} />
     </div>
   );
